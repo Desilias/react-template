@@ -4,9 +4,6 @@ import Card from "../UI/Card";
 import React,{useState} from 'react';
 const ExpenseItem = (props) => {
   const [title,SetTitle ]= useState(props.title);
-  const eventHandler = ()=>{
-    SetTitle("Udated");
-  }
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
@@ -14,7 +11,6 @@ const ExpenseItem = (props) => {
         <h2>{title}</h2>
         <div className="expense-item__price">{props.amount}</div>
       </div>
-      <button onClick={eventHandler}>change title</button>
     </Card>
   );
 };
